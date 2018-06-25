@@ -1,0 +1,44 @@
+{
+  "name": "tcmb-react-app",
+  "version": "0.1.0",
+  "description": "A beautiful React application that lets you display exchange rates announced by CBRT at any given date with filter options.",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "@material-ui/core": "^1.2.3",
+    "@material-ui/icons": "^1.1.0",
+    "currency-flags": "^1.7.1",
+    "currency-symbol-map": "^4.0.4",
+    "material-ui-pickers": "^1.0.0-rc.10",
+    "moment": "^2.22.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "react-select": "^2.0.0-beta.6",
+    "tcmb-exchange-rates": "^0.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alisabrigok/tcmb-react-app.git"
+  },
+  "keywords": [
+    "react",
+    "tcmb",
+    "cbrt",
+    "materialui",
+    "material"
+  ],
+  "author": "Ali Sabri GÖK <alisabrigok@gmail.com> (http://www.alisabri.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alisabrigok/tcmb-react-app/issues"
+  },
+  "homepage": "https://github.com/alisabrigok/tcmb-react-app#readme"
+}
