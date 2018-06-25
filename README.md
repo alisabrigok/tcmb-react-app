@@ -1,4 +1,4 @@
-# tcmb-react-app - Made With React & Material UI
+# Made With React & Material UI
 
 ## Description
 
