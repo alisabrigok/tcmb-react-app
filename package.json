@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/alisabrigok/tcmb-react-app#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "tcmb-exchange-rates": "^0.1.4"
   }
