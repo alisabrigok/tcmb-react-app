@@ -26,6 +26,7 @@ class Main extends Component {
 
   updateDate = date => {
     this.setState({ selectedDate: date });
+    this.fetchCurrencies(date);
   };
 
   fetchCurrencies = date => {
