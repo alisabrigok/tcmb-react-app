@@ -37,7 +37,10 @@ class Main extends Component {
     if (!this.state.isHome) this.setState({ selectedDate: date, loader: true });
     this.setState({ loader: true });
     date = this.dateParser(date);
-    tcmb(null, date)
+    fetch(`/api/${date}`)
+      .then(data => {
+        return data.json();
+      })
       .then(currencies => {
         if (currencies.errorCode) throw currencies;
         this.setState({
