@@ -46,6 +46,7 @@ const CustomSelect = props => {
           options={currencyOptions}
           isMulti
           isClearable
+          isSearchable={false}
           placeholder="Currency"
         />
       </List>
@@ -56,6 +57,7 @@ const CustomSelect = props => {
           options={dataOptions}
           isMulti
           isClearable
+          isSearchable={false}
           placeholder="Data Option"
         />
       </List>
