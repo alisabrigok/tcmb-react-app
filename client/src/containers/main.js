@@ -3,7 +3,6 @@ import Card from "../components/card";
 import Grid from "@material-ui/core/Grid";
 import AppBar from "./appbar";
 import Home from "../components/home";
-import tcmb from "../utils/tcmb-exchange-rates";
 import moment from "moment";
 
 class Main extends Component {
