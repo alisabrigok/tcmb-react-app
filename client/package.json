@@ -4,6 +4,7 @@
   "description": "A beautiful React application that lets you display exchange rates announced by CBRT at any given date with filter options.",
   "private": true,
   "proxy": "http://localhost:5000",
+  "homepage": "/client/build",
   "dependencies": {
     "@material-ui/core": "^1.2.3",
     "@material-ui/icons": "^1.1.0",
@@ -39,6 +40,5 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alisabrigok/tcmb-react-app/issues"
-  },
-  "homepage": "https://github.com/alisabrigok/tcmb-react-app#readme"
+  }
 }
