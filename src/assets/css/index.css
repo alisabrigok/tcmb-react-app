@@ -1,0 +1,66 @@
+html {
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ccc;
+  background-image: linear-gradient(to right, rgba(63, 81, 181, 0.8), rgba(63, 81, 181, 0.8)), url(../img/bg.jpg);
+  background-size: cover; 
+  background-position: top;
+	height: 100vh;
+}
+
+.select {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.primary-bg {
+  transition: transform 0.4s;
+  backface-visibility: hidden;
+  height: 96%;
+  background-color: #2e3b84 !important;
+}
+
+.primary-bg:hover {
+  transform: translateY(-10px);
+}
+
+.primary-bg h2 {
+  border-bottom: 2px solid #ddd;
+  font-size: 1.2em;
+  color: #ddd;
+}
+
+.primary-bg p {
+  border-bottom: 2px solid #283371;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.primary-header {
+  color: #ddd;
+}
+
+.u-align-center {
+  text-align: center;
+}
+
+.u-align-left {
+  text-align: left;
+}
+
+.u-bold {
+  font-weight: 500;
+}
+
+.u-margin-top {
+  margin-top: 50px;
+}
+
+.u-vertical-center {
+    margin: 25vh auto;
+}
+
+::selection {
+  background-color: #283371;
+  color: #ccc;
+}
