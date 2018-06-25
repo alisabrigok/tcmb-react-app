@@ -4,7 +4,7 @@
   "description": "A beautiful React application that lets you display exchange rates announced by CBRT at any given date with filter options.",
   "private": true,
   "proxy": "http://localhost:5000",
-  "homepage": "/client/build",
+  "homepage": "http://tcmb-react-app.herokuapp.com",
   "dependencies": {
     "@material-ui/core": "^1.2.3",
     "@material-ui/icons": "^1.1.0",
