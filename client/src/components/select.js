@@ -1,28 +1,31 @@
-import React, { Fragment } from "react";
-import Select from "react-select";
-import List from "@material-ui/core/List";
-import textNormalize from "../utils/helper";
+import React, { Fragment } from 'react';
+import Select from 'react-select';
+import List from '@material-ui/core/List';
+import textNormalize from '../utils/helper';
 
+// this function generates an array that consists each currency name
 const generateCurOptions = currencies => {
   const options = [];
   for (let key in currencies) {
     options.push({
       value: key,
-      label: !currencies[key]["CurrencyName"] ? currencies[key]["Isim"] : currencies[key]["CurrencyName"]
+      label: !currencies[key]['CurrencyName']
+        ? currencies[key]['Isim']
+        : currencies[key]['CurrencyName']
     });
   }
   return options;
 };
-
+// this function generates an array that consists each currency data option
 const generateDataOptions = currencies => {
   const options = [];
-  for (let data in currencies["USD"]) {
+  for (let data in currencies['USD']) {
     if (
-      data !== "$" &&
-      data !== "Unit" &&
-      data !== "Isim" &&
-      data !== "CurrencyName" &&
-      data !== "CrossRateOther"
+      data !== '$' &&
+      data !== 'Unit' &&
+      data !== 'Isim' &&
+      data !== 'CurrencyName' &&
+      data !== 'CrossRateOther'
     ) {
       options.push({
         value: data,

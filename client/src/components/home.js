@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import Button from "@material-ui/core/Button";
-import DatePicker from "../components/date-picker";
-import Loader from "./loader";
+import React, { Fragment } from 'react';
+import Button from '@material-ui/core/Button';
+import DatePicker from '../components/date-picker';
+import Loader from './loader';
 
 const HeroScene = props => {
   const HeroScene = (
@@ -18,12 +18,18 @@ const HeroScene = props => {
         />
       </div>
       <div className="u-align-center u-margin-top">
-        <Button variant="contained" color="default" size="large" onClick={props.fetchCurrencies}>
+        <Button
+          variant="contained"
+          color="default"
+          size="large"
+          onClick={props.fetchCurrencies}
+        >
           RESULTS
         </Button>
       </div>
     </Fragment>
   );
+  // if data is being fetched, show loader else show home page hero scene.
   return (
     <div className="u-vertical-center">
       {props.loader ? <Loader /> : HeroScene}

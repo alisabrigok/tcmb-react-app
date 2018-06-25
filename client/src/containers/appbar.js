@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import moment from "moment";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import classNames from "classnames";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Grid from "@material-ui/core/Grid";
-import CustomDrawer from "../components/drawer";
-import Loader from "../components/loader";
-import styles from "../utils/styles";
+import React, { Component } from 'react';
+import moment from 'moment';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Grid from '@material-ui/core/Grid';
+import CustomDrawer from '../components/drawer';
+import Loader from '../components/loader';
+import styles from '../utils/styles';
 
 class CustomAppBar extends Component {
   state = {
@@ -29,28 +29,34 @@ class CustomAppBar extends Component {
   render() {
     const { classes } = this.props;
     const { open } = this.state;
-    const cards = this.props.loader ? <Loader /> : (this.props.outputAllCurrencies());
+    // if the data hasn't fully fetched from the api, show loader else get all cards
+    const cards = this.props.loader ? (
+      <Loader />
+    ) : (
+      this.props.outputAllCurrencies()
+    );
 
+    // the result contents sit on a container that is a part of the appbar.
     return (
       <div className={classes.appFrame}>
         <AppBar
           position="static"
           className={classNames(classes.appBar, {
             [classes.appBarShift]: open,
-            [classes["appBarShift-left"]]: open
+            [classes['appBarShift-left']]: open
           })}
         >
           <Toolbar disableGutters={!open}>
             <IconButton
-              style={{ color: "#ddd" }}
+              style={{ color: '#ddd' }}
               aria-label="open drawer"
               onClick={this.handleDrawerOpen}
               className={classNames(classes.menuButton, open && classes.hide)}
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="title" style={{ color: "#ddd" }}>
-              Date: {moment(this.props.selectedDate).format("MMM Do, YYYY")}
+            <Typography variant="title" style={{ color: '#ddd' }}>
+              Date: {moment(this.props.selectedDate).format('MMM Do, YYYY')}
             </Typography>
           </Toolbar>
         </AppBar>
@@ -70,12 +76,12 @@ class CustomAppBar extends Component {
           classes={classes}
         />
         <main
-          className={classNames(classes.content, classes["content-left"], {
+          className={classNames(classes.content, classes['content-left'], {
             [classes.contentShift]: open,
-            [classes["contentShift-left"]]: open
+            [classes['contentShift-left']]: open
           })}
         >
-          <Grid container spacing={16} style={{ marginTop: "50px" }}>
+          <Grid container spacing={16} style={{ marginTop: '50px' }}>
             {!this.props.error ? (
               cards
             ) : (
@@ -84,7 +90,7 @@ class CustomAppBar extends Component {
                   {this.props.loader ? (
                     <Loader />
                   ) : (
-                    "An error occured. This might be due to public holiday date. Please choose another date or try again later."
+                    'An error occured. This might be due to public holiday date. Please choose another date or try again later.'
                   )}
                 </Grid>
               </Grid>
