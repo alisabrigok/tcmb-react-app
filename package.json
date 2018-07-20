@@ -27,6 +27,6 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "tcmb-exchange-rates": "^0.1.4"
+    "tcmb-exchange-rates": "^0.1.10"
   }
 }
