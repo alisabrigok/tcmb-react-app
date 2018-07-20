@@ -1,16 +1,38 @@
 html {
-  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #ccc;
-  background-image: linear-gradient(to right, rgba(63, 81, 181, 0.8), rgba(63, 81, 181, 0.8)), url(../img/bg.jpg);
-  background-size: cover; 
+  background-image: linear-gradient(
+      to right,
+      rgba(63, 81, 181, 0.8),
+      rgba(63, 81, 181, 0.8)
+    ),
+    url(../img/bg.jpg);
+  background-size: cover;
   background-position: top;
-	height: 100vh;
+  height: 100vh;
 }
 
 .select {
   margin-right: 10px;
   margin-left: 10px;
   color: rgba(0, 0, 0, 0.87);
+}
+
+.button-container > button {
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.datepicker-container > div > div {
+  color: #ccc;
+}
+
+.datepicker-container > div > div::before {
+  border-bottom-color: #ccc;
+}
+
+.datepicker-container > div > div > div > button > span {
+  color: #ccc;
 }
 
 .primary-bg {
@@ -57,7 +79,7 @@ html {
 }
 
 .u-vertical-center {
-    margin: 25vh auto;
+  margin: 25vh auto;
 }
 
 ::selection {

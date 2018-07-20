@@ -9,7 +9,7 @@ const HeroScene = props => {
       <div className="u-align-center u-margin-top primary-header">
         <h1>Get Exchange Rates Announced By CBRT</h1>
       </div>
-      <div className="u-align-center u-margin-top secondary-header">
+      <div className="u-align-center u-margin-top secondary-header datepicker-container">
         <DatePicker
           isHome={props.isHome}
           selectedDate={props.selectedDate}
@@ -17,9 +17,9 @@ const HeroScene = props => {
           updateDate={props.updateDate}
         />
       </div>
-      <div className="u-align-center u-margin-top">
+      <div className="u-align-center u-margin-top button-container">
         <Button
-          variant="contained"
+          variant="outlined"
           color="default"
           size="large"
           onClick={props.fetchCurrencies}
